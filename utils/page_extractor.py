@@ -14,7 +14,7 @@ def extract_pages():
             reader = PdfReader(uploaded_file)
             total_pages = len(reader.pages)
 
-            # Validate range
+           
             if "-" not in page_range:
                 st.error("❌ Use the format start-end (e.g., 2-5).")
                 return

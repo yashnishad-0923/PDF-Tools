@@ -15,7 +15,7 @@ def compress_pdf():
 
             for page in reader.pages:
                 try:
-                    page.compress_content_streams()  # Optional: depends on PDF structure
+                    page.compress_content_streams() 
                 except:
                     pass
                 writer.add_page(page)
@@ -24,7 +24,7 @@ def compress_pdf():
             writer.write(output)
             output.seek(0)
 
-            original_size = len(uploaded_file.getvalue()) / 1024  # in KB
+            original_size = len(uploaded_file.getvalue()) / 1024  
             compressed_size = len(output.getvalue()) / 1024
             reduction = original_size - compressed_size
 

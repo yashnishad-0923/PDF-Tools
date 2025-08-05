@@ -24,14 +24,14 @@ def convert_docx_to_pdf():
                     input_path = temp_dir / file.name
                     output_path = temp_dir / (file.name.replace(".docx", ".pdf"))
 
-                    # Save uploaded file temporarily
+                   
                     with open(input_path, "wb") as f:
                         f.write(file.getbuffer())
 
-                    # Convert using docx2pdf (must be on Windows with Word)
+                    
                     convert(str(input_path), str(output_path))
 
-                    # Read output PDF
+                   
                     with open(output_path, "rb") as f:
                         output_files.append((file.name.replace(".docx", ".pdf"), f.read()))
 
