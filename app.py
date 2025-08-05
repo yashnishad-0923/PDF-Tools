@@ -36,3 +36,9 @@ elif tool == "🖼️ Images to PDF":
 
 elif tool == "🔁 DOCX to PDF":
     convert_docx_to_pdf()
+
+st.markdown("---")
+st.markdown(
+    "<center><sub>Made with ❤️ by <b>Yash Nishad</b></sub></center>",
+    unsafe_allow_html=True
+)
